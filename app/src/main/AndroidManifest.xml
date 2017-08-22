@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.csecu.amrit.checkup">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GeneralMenuActivity"
+            android:label="@string/title_activity_general_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignupOptionsActivity"
+            android:label="@string/title_activity_signup_options"
+            android:parentActivityName=".GeneralMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csecu.amrit.checkup.GeneralMenuActivity" />
+        </activity>
+        <activity
+            android:name=".DoctorSignupActivity"
+            android:label="@string/title_activity_doctor_signup"
+            android:parentActivityName=".SignupOptionsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csecu.amrit.checkup.SignupOptionsActivity" />
+        </activity>
+        <activity
+            android:name=".DoctorsActivity"
+            android:label="@string/title_activity_doctors"
+            android:parentActivityName=".GeneralMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csecu.amrit.checkup.GeneralMenuActivity" />
+        </activity>
+        <activity
+            android:name=".DoctorDetailsActivity"
+            android:label="@string/title_activity_doctor_details"
+            android:parentActivityName=".DoctorsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csecu.amrit.checkup.DoctorsActivity" />
+        </activity>
+        <activity
+            android:name=".AppointmentActivity"
+            android:label="@string/title_activity_appointment"
+            android:parentActivityName=".DoctorDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csecu.amrit.checkup.DoctorDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".DoctorSigninActivity"
+            android:label="@string/title_activity_doctor_signin"
+            android:parentActivityName=".GeneralMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csecu.amrit.checkup.GeneralMenuActivity" />
+        </activity>
+        <activity
+            android:name=".DoctorMenuActivity"
+            android:label="@string/title_activity_doctor_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PatientListActivity"
+            android:label="@string/title_activity_patient_list"
+            android:parentActivityName=".DoctorMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csecu.amrit.checkup.DoctorMenuActivity" />
+        </activity>
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MessageActivity"
+            android:label="@string/title_activity_message"
+            android:parentActivityName=".PatientListActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csecu.amrit.checkup.PatientListActivity" />
+        </activity>
+    </application>
+
+</manifest>

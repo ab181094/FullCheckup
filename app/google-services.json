@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1034291362520",
+    "firebase_url": "https://checkup-b26d5.firebaseio.com",
+    "project_id": "checkup-b26d5",
+    "storage_bucket": "checkup-b26d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034291362520:android:08f8bf7278c8c8a0",
+        "android_client_info": {
+          "package_name": "com.csecu.amrit.checkup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034291362520-fcflekohjt7vpc4t2qmin8p22g97mu82.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD2hc8P4bIBAI4vf-fXp6gBubtHxqjvfg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
